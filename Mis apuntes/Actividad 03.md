@@ -2,8 +2,8 @@ El juego de los sapos y las ranas. Alicia ha capacitado un grupo de ranas y Brun
 Los sapos mueven solo hacia la izquierda y las ranas solo hacia la derecha. Pierde el jugador que tiene el turno de jugar y cuyo equipo no dispone de ningún batracio móvil (por ejemplo, cuando todos han llegado al extremo opuesto). Algunas jugadas válidas se muestran a continuación.
 
 Rana
-![[Pasted image 20261101125245.png]]
 Fig. 1. Ejemplo de movidas válidas.
+![](https://github.com/ituarte/PublicProIII/blob/main/Mis%20apuntes/Images/Pasted%20image%2020261101125245.png)
 
 Aquí, los sapos son más oscuros que las ranas y además todos miran en la dirección hacia la que se pueden desplazar. En el caso de arriba, la rana saltó sobre el sapo para ocupar la primera posición libre. Si hubiera sido su turno, el sapo podría haber saltado sobre la rana. En el ejemplo de abajo, el sapo se desplazó una posición para ocupar la siguiente posición libre a la izquierda.
 
@@ -16,12 +16,12 @@ Ranas desplazan a la derecha.
 Sapos desplazan a la izquierda
 	- Avanzar 1 casilla a la izquierda si esta vacia.
 	- Saltar 1 casilla sobre una rana si la casilla siguiente esta vacia.
-![[Actividad3_PIII.drawio.png]]
+![](https://github.com/ituarte/PublicProIII/blob/main/Mis%20apuntes/Images/Actividad3_PIII.drawio.png)
 ### B) Estime aproximadamente la reducción de nodos explorados que se logra a través de la poda. Explique la razón de esto.
 Sin poda, se estima que puede superar a 120 nodos, debido a que cada fila tiene aproxidamente tiene 8-12 estados alcanzables, y al combinar dos filas independientes. $(F1XF2=100)$
 Con poda, al aprovechar que las dos filas son identidas, y se elimina la mitad de las ramas iniciales por simetria, y al evaluar las subfilas de forma independiente, los nodos se reproducen a aproxidamente 15-25 nodos. $(F1+F2$), en vez de $(F1*F2)$
 El porcentaje de reduccion se estima de 60% a 75% ($((120/100)*25)-100$)
-### C) Escriba el pseudocódigo para el desarrollo del árbol de este juego incluyendo la poda. Ingrese como parámetros cantidad de filas y posiciones iniciales de las ranas y los sapos.![[Pasted image 20261101125253.png]]
+### C) Escriba el pseudocódigo para el desarrollo del árbol de este juego incluyendo la poda. Ingrese como parámetros cantidad de filas y posiciones iniciales de las ranas y los sapos. ![](https://github.com/ituarte/PublicProIII/blob/main/Mis%20apuntes/Images/Pasted%20image%2020261101125253.png)
 ```
 Estructura EstadoJuego:
     filas: Lista de Cadenas  // Ejemplo: ["R_S_", "R_S_"]
