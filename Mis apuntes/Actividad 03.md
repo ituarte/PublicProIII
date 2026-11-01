@@ -8,7 +8,8 @@ Fig. 1. Ejemplo de movidas válidas.
 Aquí, los sapos son más oscuros que las ranas y además todos miran en la dirección hacia la que se pueden desplazar. En el caso de arriba, la rana saltó sobre el sapo para ocupar la primera posición libre. Si hubiera sido su turno, el sapo podría haber saltado sobre la rana. En el ejemplo de abajo, el sapo se desplazó una posición para ocupar la siguiente posición libre a la izquierda.
 
 ---
-### A) Desarrolle el árbol de juego para el estado inicial que se muestra en la figura 2. No desarrolle el árbol completo; utilice alguno de los métodos de poda que se vieron en la exposición de experto correspondiente a esta UVA (por ejemplo, en el algoritmo del juego de los fósforos).
+### A) Desarrolle el árbol de juego para el estado inicial que se muestra en la figura 2. ![](https://github.com/ituarte/PublicProIII/blob/main/Mis%20apuntes/Images/Pasted%20image%2020261101125253.png)
+### No desarrolle el árbol completo; utilice alguno de los métodos de poda que se vieron en la exposición de experto correspondiente a esta UVA (por ejemplo, en el algoritmo del juego de los fósforos).
 
 Ranas desplazan a la derecha.
 	-  Avanzar 1 casilla a la derecha si esta vacia.
@@ -21,7 +22,7 @@ Sapos desplazan a la izquierda
 Sin poda, se estima que puede superar a 120 nodos, debido a que cada fila tiene aproxidamente tiene 8-12 estados alcanzables, y al combinar dos filas independientes. $(F1XF2=100)$
 Con poda, al aprovechar que las dos filas son identidas, y se elimina la mitad de las ramas iniciales por simetria, y al evaluar las subfilas de forma independiente, los nodos se reproducen a aproxidamente 15-25 nodos. $(F1+F2$), en vez de $(F1*F2)$
 El porcentaje de reduccion se estima de 60% a 75% ($((120/100)*25)-100$)
-### C) Escriba el pseudocódigo para el desarrollo del árbol de este juego incluyendo la poda. Ingrese como parámetros cantidad de filas y posiciones iniciales de las ranas y los sapos. ![](https://github.com/ituarte/PublicProIII/blob/main/Mis%20apuntes/Images/Pasted%20image%2020261101125253.png)
+### C) Escriba el pseudocódigo para el desarrollo del árbol de este juego incluyendo la poda. Ingrese como parámetros cantidad de filas y posiciones iniciales de las ranas y los sapos. 
 ```
 Estructura EstadoJuego:
     filas: Lista de Cadenas  // Ejemplo: ["R_S_", "R_S_"]
